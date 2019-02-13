@@ -13,7 +13,7 @@ void setup(){
   Serial.begin(9600);
 
   myStepper.setSpeed(15);
-  myStepper.setSpeed(15);
+  myStepperB.setSpeed(15);
 
 
 while ( Time < 48 ) {
@@ -134,7 +134,7 @@ while ( Time < 48 ) {
   }  
   
   int calB = round((stepatminC + stepatminD)/2);
-  myStepperB.step(-(101 - calB));
+  myStepperB.step(-(101 - calB));  //My Stepper Motor does not execute this line. This is the issue. 
   Serial.print(" worked ");
   Serial.print(calB);
   
